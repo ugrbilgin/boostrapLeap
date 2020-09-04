@@ -1,0 +1,124 @@
+html,
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+
+body {
+  min-height: 3000px;
+}
+
+.navbar-container {
+  margin-bottom: -80px;
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  .navbar {
+    padding: 24px 0;
+  }
+}
+
+.bg-image {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+.bg-image:not([class*="absolute"]) {
+  position: absolute;
+}
+
+.bg-transparent {
+  background-color: #fff;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.bg-primary-3 {
+  background: url("https://source.unsplash.com/1600x900/?nature,water") center
+    fixed no-repeat;
+  background-size: 100% 100%;
+  min-height: 700px;
+  padding: 60px 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow-y: visible;
+  &::before {
+    content: " ";
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  aside {
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    // Searchbar Settings
+    #searchbar-input {
+      padding: 32px 36px;
+      border-radius: 0 15px 15px 0;
+    }
+
+    #searchbar-label {
+      padding: 16px 36px;
+      border-radius: 10px 0 0 10px;
+      background-color: #142a4a;
+      color: white;
+      border-color: transparent;
+    }
+  }
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #2c4396;
+  border-color: #293f8d;
+  font-size: 15px;
+  padding: 8px 32px;
+}
+
+.btn-primary:hover {
+  color: #fff !important;
+  background-color: lighten($color: #2e48a0, $amount: 15%);
+  border-color: #2c4396;
+}
+
+.btn:hover {
+  color: #495057;
+  text-decoration: none;
+}
+
+section{
+    padding: 80px 0;
+}
+
+.container {
+    width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a{
+   
+}
+
+.card+ .card{
+    margin-top: 1.5rem;
+}
