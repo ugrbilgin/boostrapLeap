@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "posthtml-include": "^1.4.3",
     "sass": "^1.26.10"
   }

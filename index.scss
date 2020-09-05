@@ -3,10 +3,6 @@ body {
   font-family: "Roboto", sans-serif !important;
 }
 
-body {
-  min-height: 3000px;
-}
-
 .navbar-container {
   margin-bottom: -80px;
   position: relative;
@@ -41,8 +37,7 @@ body {
 }
 
 .bg-primary-3 {
-  background: url("https://source.unsplash.com/1600x900/?nature,water") center
-    fixed no-repeat;
+  background: url("https://source.unsplash.com/1600x900/?nature,water") center fixed no-repeat;
   background-size: 100% 100%;
   min-height: 700px;
   padding: 60px 24%;
@@ -75,7 +70,10 @@ body {
     }
 
     #searchbar-label {
-      padding: 16px 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
       border-radius: 10px 0 0 10px;
       background-color: #142a4a;
       color: white;
@@ -103,22 +101,82 @@ body {
   text-decoration: none;
 }
 
-section{
-    padding: 80px 0;
+section {
+  padding: 80px 0;
 }
 
 .container {
-    width: 100%;
-    padding-right: 12px;
-    padding-left: 12px;
-    margin-right: auto;
-    margin-left: auto;
+  width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-a{
-   
+.bg-primary {
+  background: rgba(55, 85, 190, 0.1) !important;
+  justify-items: center;
+  align-items: center;
 }
 
-.card+ .card{
-    margin-top: 1.5rem;
+svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon-container {
+  width: 6rem;
+  height: 6rem;
+
+  background: rgba(55, 85, 190, 0.1) !important;
+}
+
+.icon-round {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+img {
+  border-radius: 50%;
+  width: 50px;
+  vertical-align: middle;
+  border-style: none;
+  height: 50px;
+  border: 2px solid #fff;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+.text-small {
+  margin: 10px;
+}
+
+.card-body {
+  margin: 30px;
+  border-radius: 20px;
+}
+.left-img {
+  margin: -20px;
+}
+a,
+a:hover {
+  text-decoration: none !important;
+  text-decoration-style: none !important;
+}
+
+.card {
+  transition: all 0.4s ease-in-out;
+  margin: 16px 0;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 36px 0;
+    transform: rotate(3deg);
+    &:nth-child(even) {
+      transform: rotate(-3deg);
+    }
+  }
 }

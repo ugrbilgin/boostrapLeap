@@ -1,63 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
+
+    <link rel="stylesheet" href="scss/bootstrap.scss" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="index.scss" />
     <script>
-       // console.log(" document.body", document.body)
-        window.onscroll = (e) => {
-            const classList = document.getElementById("navbar").classList
-            //console.log("window.screenTop", window.scrollY)
-            if (window.scrollY < 50) {
+      // console.log(" document.body", document.body)
+      window.onscroll = (e) => {
+        const classList = document.getElementById("navbar").classList;
+        //console.log("window.screenTop", window.scrollY)
+        if (window.scrollY < 50) {
+          classList.remove("navbar-dark");
+          classList.remove("bg-dark");
+          classList.add("navbar-transparent");
+          classList.add("bg-transparent");
 
-                classList.remove("navbar-dark")
-                classList.remove("bg-dark")
-                classList.add("navbar-transparent")
-                classList.add("bg-transparent")
+          classList.add("bg-light");
+        } else {
+          classList.add("navbar-dark");
+          classList.add("bg-dark");
+          classList.remove("navbar-transparent");
+          classList.remove("bg-transparent");
 
-                classList.add("bg-light")
-            } else {
-                classList.add("navbar-dark")
-                classList.add("bg-dark")
-                classList.remove("navbar-transparent")
-                classList.remove("bg-transparent")
-
-                classList.remove("bg-light")
-
-            }
+          classList.remove("bg-light");
         }
+      };
     </script>
-</head>
+  </head>
 
-<body>
-
-
-
-
-    
-    <include src="components/sectionUp.html" />
-    <include src="components/sectionMid.html"/>
-
-
-
-
-</body>
-
+  <body>
+    <include src="components/sectionUp.html"></include>
+    <include src="components/sectionMid.html"></include>
+    <include src="components\footer.html"></include>
+  </body>
 </html>
